@@ -21,11 +21,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _groundedPlayer = _controller.isGrounded;
+        /**_groundedPlayer = _controller.isGrounded;
         if (_groundedPlayer && _velocity.y < 0)
         {
           _velocity.y = 0f;
-        }
+        }*/
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         move = transform.TransformDirection(move);
@@ -39,12 +39,12 @@ public class Movement : MonoBehaviour
           transform.forward = move;
         }
 
-        if (Input.GetButtonDown("Jump") && _groundedPlayer)
+        /**if (Input.GetButtonDown("Jump") && _groundedPlayer)
         {
           _velocity.y += Mathf.Sqrt(_jumpHeight * (float)-3.0 * gravity);
         }
         _velocity.y += gravity * Time.deltaTime;
-        _controller.Move(_velocity * Time.deltaTime);
+        _controller.Move(_velocity * Time.deltaTime);*/
     }
 }
 
