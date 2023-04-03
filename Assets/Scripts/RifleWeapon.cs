@@ -9,7 +9,7 @@ public class RifleWeapon : MonoBehaviour
 
     [SerializeField] private int maxAmmo = 0;
     [SerializeField] private float firingSpeed;
-    public float _curAmmo;
+    public float _currentAmmo;
 
     private bool _isOut = true;
     private Color _initColor;
@@ -23,7 +23,7 @@ public class RifleWeapon : MonoBehaviour
         _rifle = GetComponent<ParticleSystem>();
         _rifle.Stop();
 
-        _curAmmo = maxAmmo;
+        _currentAmmo = maxAmmo;
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class RifleWeapon : MonoBehaviour
     {
         WeaponSwitching();
 
-        if (_curAmmo > 0 && _isOut)
+        if (_currentAmmo > 0 && _isOut)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -40,7 +40,7 @@ public class RifleWeapon : MonoBehaviour
 
             if (Input.GetMouseButton(0))
             {
-                _curAmmo -= 1 * firingSpeed * Time.deltaTime;
+                _currentAmmo -= 1 * firingSpeed * Time.deltaTime;
             }
 
             if (Input.GetMouseButtonUp(0))
@@ -52,9 +52,9 @@ public class RifleWeapon : MonoBehaviour
         {
             _rifle.Stop();
             
-            if (_curAmmo < 0)
+            if (_currentAmmo < 0)
             {
-                _curAmmo = 0;
+                _currentAmmo = 0;
             }
         }
 
@@ -63,7 +63,7 @@ public class RifleWeapon : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                _curAmmo = maxAmmo;
+                _currentAmmo = maxAmmo;
             }
         }
     }

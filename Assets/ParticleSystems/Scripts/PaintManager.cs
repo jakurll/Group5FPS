@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 public class PaintManager : MonoBehaviour
 {
     [SerializeField] private Shader _painter;
-    public Material _paintMaterial;
+    private Material _paintMaterial;
 
     //[SerializeField] private Shader _islands;
     //private Material _extendMaterial;

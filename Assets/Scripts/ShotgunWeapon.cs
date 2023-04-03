@@ -7,7 +7,10 @@ public class ShotgunWeapon : MonoBehaviour
 {
     private ParticleSystem _shotgun;
     [SerializeField] int maxAmmo = 0;
-    public int _curAmmo;
+    public int _currentAmmo;
+
+    [Header("Cool down Time in seconds:")]
+    [SerializeField] private float coolDown;
 
     private bool _isOut = false;
 
@@ -19,7 +22,7 @@ public class ShotgunWeapon : MonoBehaviour
     {
         _shotgun = GetComponent<ParticleSystem>();
         _shotgun.Stop();
-        _curAmmo = maxAmmo;
+        _currentAmmo = maxAmmo;
     }
 
     // Update is called once per frame
@@ -27,12 +30,13 @@ public class ShotgunWeapon : MonoBehaviour
     {
         WeaponSwitching();
 
-        if (_curAmmo > 0 && _isOut)
+        if (_currentAmmo > 0 && _isOut)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 _shotgun.Play();
-                _curAmmo--;
+                _currentAmmo--;
+                StartCoroutine(CoolDown());
             }
         }
 
@@ -41,7 +45,7 @@ public class ShotgunWeapon : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                _curAmmo = maxAmmo;
+                _currentAmmo = maxAmmo;
             }
         }
     }
@@ -72,5 +76,12 @@ public class ShotgunWeapon : MonoBehaviour
         {
             _isOut = true;
         }
+    }
+
+    IEnumerator CoolDown()
+    {
+        _isOut = false;
+        yield return new WaitForSeconds(coolDown);
+        _isOut = true;
     }
 }
