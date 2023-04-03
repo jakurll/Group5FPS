@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class Paintable : MonoBehaviour
 {
+    // SOURCE: https://www.youtube.com/watch?v=YUWfHX_ZNCw, https://www.youtube.com/watch?v=FR618z5xEiM.
+
     // Paintable Class will initialize all information needed by
     // the buffer in the PaintManager class and will represent
     // what we can acutally paint on.

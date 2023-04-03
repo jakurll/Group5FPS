@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class PaintManager : MonoBehaviour
 {
+    // SOURCE: https://www.youtube.com/watch?v=YUWfHX_ZNCw, https://www.youtube.com/watch?v=FR618z5xEiM.
+
     [SerializeField] private Shader _painter;
     private Material _paintMaterial;
 

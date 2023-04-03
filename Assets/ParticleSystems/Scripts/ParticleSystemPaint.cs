@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(ParticleSystem))]
 public class ParticleSystemPaint : MonoBehaviour
 {
+    // SOURCE: https://www.youtube.com/watch?v=YUWfHX_ZNCw, https://www.youtube.com/watch?v=FR618z5xEiM.
+
     // Using the OnParticleCollision method we fill a list with those collisions
     // and if the surface is paintable then we add paint to each of those positions.
 
