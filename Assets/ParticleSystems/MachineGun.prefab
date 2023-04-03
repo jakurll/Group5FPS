@@ -4880,8 +4880,8 @@ GameObject:
   m_Component:
   - component: {fileID: 286677169261725512}
   - component: {fileID: 4291210051442414403}
-  - component: {fileID: 342038364929071308}
   - component: {fileID: 5725974259665034729}
+  - component: {fileID: 342038364929071308}
   m_Layer: 0
   m_Name: MachineGun
   m_TagString: Untagged
@@ -9681,6 +9681,24 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &5725974259665034729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5725974259665034728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c2f44d93817e140b7d96d4514b22bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintManager: {fileID: 0}
+  _paintColor: {r: 1, g: 0.8733365, b: 0.3537736, a: 0}
+  _minRadius: 0.05
+  _maxRadius: 0.2
+  _strength: 1
+  _hardness: 1
 --- !u!199 &342038364929071308
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -9754,24 +9772,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &5725974259665034729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5725974259665034728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62c2f44d93817e140b7d96d4514b22bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintManager: {fileID: 0}
-  _paintColor: {r: 1, g: 0.8733365, b: 0.3537736, a: 0}
-  _minRadius: 0.05
-  _maxRadius: 0.2
-  _strength: 1
-  _hardness: 1
 --- !u!1 &8753878539486480321
 GameObject:
   m_ObjectHideFlags: 0
