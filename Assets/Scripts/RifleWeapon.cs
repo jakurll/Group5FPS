@@ -8,7 +8,7 @@ public class RifleWeapon : MonoBehaviour
     private ParticleSystem _rifle;
     public GameObject rifleGameObject;
 
-    [SerializeField] private int maxAmmo = 0;
+    public int maxAmmo = 0;
     [SerializeField] private float firingSpeed;
     public float _currentAmmo;
 
