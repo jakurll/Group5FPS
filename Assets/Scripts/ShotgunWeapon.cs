@@ -19,6 +19,9 @@ public class ShotgunWeapon : MonoBehaviour
 
     [Header("Dev Testing")]
     [SerializeField] private bool rToReload;
+
+    public bool IsOut { get { return _isOut; } set { _isOut = value; } }
+
     private void OnEnable()
     {
         _shotgun = GetComponent<ParticleSystem>();

@@ -278,7 +278,8 @@ Transform:
   m_LocalPosition: {x: -3.07, y: 0.29491797, z: 2.9477983}
   m_LocalScale: {x: 5.7630076, y: 0.43949565, z: 5.7630076}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1621104856}
   m_Father: {fileID: 1333852207}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -576,7 +577,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1694270
+  m_Name: pb_Mesh27722
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4625,7 +4626,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 568219223}
-  - {fileID: 1621104856}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4654,13 +4654,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621104855}
-  m_LocalRotation: {x: -1.110223e-17, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0388381, y: 0.59, z: 2.95}
-  m_LocalScale: {x: 5.5699215, y: 0.42477056, z: 5.5699215}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0054072086, y: 0.67141056, z: 0.0003820567}
+  m_LocalScale: {x: 0.9664957, y: 0.96649545, z: 0.9664957}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1333852207}
-  m_RootOrder: 1
+  m_Father: {fileID: 568219223}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1621104857
 SphereCollider:
