@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShotgunWeapon : MonoBehaviour
 {
     private ParticleSystem _shotgun;
+    [SerializeField] GameObject shotgunGameObject;
     [SerializeField] int maxAmmo = 0;
     public int _currentAmmo;
 
@@ -70,11 +71,13 @@ public class ShotgunWeapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             _isOut = false;
+            shotgunGameObject.SetActive(false);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             _isOut = true;
+            shotgunGameObject.SetActive(true);
         }
     }
 

@@ -6,6 +6,7 @@ using UnityEngine;
 public class RifleWeapon : MonoBehaviour
 {
     private ParticleSystem _rifle;
+    public GameObject rifleGameObject;
 
     [SerializeField] private int maxAmmo = 0;
     [SerializeField] private float firingSpeed;
@@ -17,7 +18,6 @@ public class RifleWeapon : MonoBehaviour
     [Header("Dev Testing")]
     [SerializeField] private bool rToReload;
 
-    private float paintAmount = 255f;
     private void OnEnable()
     {
         _rifle = GetComponent<ParticleSystem>();
@@ -87,11 +87,13 @@ public class RifleWeapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             _isOut = true;
+            rifleGameObject.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             _isOut = false;
+            rifleGameObject.SetActive(false);
         }
     }
 }
