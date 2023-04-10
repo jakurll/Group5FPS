@@ -59,7 +59,7 @@ public class ShotgunWeapon : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
-            var enemy = other.GetComponent<EnemyStats>();
+            var enemy = other.GetComponentInParent<EnemyStats>();
 
             enemy.enemyHealth--;
             _initColor = enemy._shader.GetColor("_Albedo");
