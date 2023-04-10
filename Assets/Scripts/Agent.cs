@@ -5,7 +5,7 @@ using UnityEngine;
 public class Agent : MonoBehaviour
 {
   public GameObject player;
-  public float speed = 0.1f;
+  public float speed = 0.02f;
   public bool run = false;
 
   // Start is called before the first frame update
