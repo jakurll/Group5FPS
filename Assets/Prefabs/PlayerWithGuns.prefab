@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 8924525575600158136}
   - component: {fileID: 8924525575600158140}
   - component: {fileID: 8924525575600158114}
-  - component: {fileID: 8924525575600158139}
+  - component: {fileID: 4313448046638479053}
   - component: {fileID: 8924525575600158115}
   m_Layer: 8
   m_Name: PlayerWithGuns
@@ -246,7 +246,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8924525575600158139
+--- !u!114 &4313448046638479053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8924525575600158138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8db5c15684b319642bef8d94ef48de0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 156fa68b288ba934f85dc6720ce0dbd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8924525575600158115
@@ -614,6 +614,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 828565756381870885, guid: 4390ec8c9c9b7d74195cbc0f5f52fddb, type: 3}
   m_PrefabInstance: {fileID: 5545344480455757693}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5545344480722616260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5155123243741131864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c1d2c869c55bc458e141a989d43db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotgunGameObject: {fileID: 4626442277266954375}
+  maxAmmo: 6
+  _currentAmmo: 0
+  coolDown: 0.25
+  rToReload: 1
 --- !u!114 &5545344480722616264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,23 +649,6 @@ MonoBehaviour:
   _maxRadius: 1.5
   _strength: 1
   _hardness: 0.01
---- !u!114 &5545344480722616260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5155123243741131864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0c1d2c869c55bc458e141a989d43db3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotgunGameObject: {fileID: 4626442277266954375}
-  maxAmmo: 6
-  _currentAmmo: 0
-  coolDown: 0.25
-  rToReload: 1
 --- !u!4 &9195093071044071145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3706054585694142868, guid: 4390ec8c9c9b7d74195cbc0f5f52fddb, type: 3}
