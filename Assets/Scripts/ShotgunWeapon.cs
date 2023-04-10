@@ -7,7 +7,7 @@ public class ShotgunWeapon : MonoBehaviour
 {
     private ParticleSystem _shotgun;
     [SerializeField] GameObject shotgunGameObject;
-    [SerializeField] int maxAmmo = 0;
+    public int maxAmmo = 0;
     public int _currentAmmo;
 
     [Header("Cool down Time in seconds:")]
@@ -19,6 +19,9 @@ public class ShotgunWeapon : MonoBehaviour
 
     [Header("Dev Testing")]
     [SerializeField] private bool rToReload;
+
+    public bool IsOut { get { return _isOut; } set { _isOut = value; } }
+
     private void OnEnable()
     {
         _shotgun = GetComponent<ParticleSystem>();
