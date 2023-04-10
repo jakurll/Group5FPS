@@ -10,7 +10,7 @@ public class EnemyStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _shader = GetComponent<Renderer>().material;
+        _shader = GetComponentInChildren<Renderer>().material;
     }
 
     // Update is called once per frame

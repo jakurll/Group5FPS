@@ -8,7 +8,7 @@ public class RifleWeapon : MonoBehaviour
     private ParticleSystem _rifle;
     public GameObject rifleGameObject;
 
-    [SerializeField] private int maxAmmo = 0;
+    public int maxAmmo = 0;
     [SerializeField] private float firingSpeed;
     public float _currentAmmo;
 
@@ -17,6 +17,8 @@ public class RifleWeapon : MonoBehaviour
 
     [Header("Dev Testing")]
     [SerializeField] private bool rToReload;
+
+    public bool IsOut { get {return _isOut; } set { _isOut = value; } }
 
     private void OnEnable()
     {
@@ -73,7 +75,7 @@ public class RifleWeapon : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            var enemy = other.GetComponent<EnemyStats>();
+            var enemy = other.GetComponentInParent<EnemyStats>();
 
             enemy.enemyHealth--;
             _initColor = enemy._shader.GetColor("_Albedo");
