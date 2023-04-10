@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shotgun
   - Rifle
+  - Platform
   layers:
   - Default
   - TransparentFX
