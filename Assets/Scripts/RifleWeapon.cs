@@ -7,6 +7,8 @@ public class RifleWeapon : MonoBehaviour
 {
     private ParticleSystem _rifle;
     public GameObject rifleGameObject;
+    private Animator _animator;
+    private GameObject _parent;
 
     public int maxAmmo = 0;
     [SerializeField] private float firingSpeed;
@@ -24,7 +26,8 @@ public class RifleWeapon : MonoBehaviour
     {
         _rifle = GetComponent<ParticleSystem>();
         _rifle.Stop();
-
+        _parent = GameObject.Find("MachineGunPrefab");
+        _animator = _parent.GetComponentInChildren<Animator>();
         _currentAmmo = maxAmmo;
     }
 
@@ -43,6 +46,7 @@ public class RifleWeapon : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 _currentAmmo -= 1 * firingSpeed * Time.deltaTime;
+                _animator.Play("MachineGun");
             }
 
             if (Input.GetMouseButtonUp(0))
