@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
-  public GameObject player;
+  public GameObject player; //Player Target
+  public GameObject patrol; //Patrol Position
   public float speed = 0.02f;
-  public bool run = false;
+  public bool run = false; //Chase the player
+  public bool seekPatrol = false;
 
   // Start is called before the first frame update
   void Start()
@@ -21,6 +23,11 @@ public class Agent : MonoBehaviour
     {
       Run();
     }
+
+    if (player == null && seekPatrol)
+    {
+      SeekPatrol();
+    }
   }
 
   //Check if player is in box collider
@@ -30,6 +37,11 @@ public class Agent : MonoBehaviour
     {
       player = other.gameObject;
       run = true;
+      seekPatrol = false;
+    }
+    else
+    {
+      SeekPatrol();
     }
   }
 
@@ -41,6 +53,10 @@ public class Agent : MonoBehaviour
       player = null;
       run = false;
     }
+    else
+    {
+      seekPatrol = true;
+    }
   }
 
   //Look and run towards player
@@ -48,5 +64,13 @@ public class Agent : MonoBehaviour
   {
     transform.LookAt(player.transform.position);
     transform.position = (transform.forward * speed) + transform.position;
+  }
+
+  //Look and run towards patrol spot
+  private void SeekPatrol()
+  {
+    transform.LookAt(patrol.transform.position);
+    transform.position = (transform.forward * speed) + transform.position;
+    transform.LookAt(patrol.transform.forward);
   }
 }
