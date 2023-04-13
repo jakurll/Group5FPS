@@ -39,10 +39,6 @@ public class Agent : MonoBehaviour
       run = true;
       seekPatrol = false;
     }
-    else
-    {
-      SeekPatrol();
-    }
   }
 
   //Check if player left box collider
