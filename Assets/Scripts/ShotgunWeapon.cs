@@ -6,6 +6,8 @@ using UnityEngine;
 public class ShotgunWeapon : MonoBehaviour
 {
     private ParticleSystem _shotgun;
+    private Animator _animator;
+    private GameObject _parent;
     [SerializeField] GameObject shotgunGameObject;
     public int maxAmmo = 0;
     public int _currentAmmo;
@@ -25,8 +27,16 @@ public class ShotgunWeapon : MonoBehaviour
     private void OnEnable()
     {
         _shotgun = GetComponent<ParticleSystem>();
+
+        _parent = GameObject.Find("ShotgunPrefab");
+        _animator = _parent.GetComponentInChildren<Animator>();
         _shotgun.Stop();
         _currentAmmo = maxAmmo;
+    }
+
+    private void Start()
+    {
+        _parent.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,6 +49,7 @@ public class ShotgunWeapon : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 _shotgun.Play();
+                _animator.Play("ShotgunRecoil");
                 _currentAmmo--;
                 StartCoroutine(CoolDown());
             }
