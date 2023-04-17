@@ -6,13 +6,8 @@ using UnityEngine;
 public class ShotgunWeapon : MonoBehaviour
 {
     private ParticleSystem _shotgun;
-    private BossAcidCheck _textureCheck;
-    private Animator _animator;
-    private GameObject _parent;
-    [SerializeField] GameObject shotgunGameObject;
-    public int maxAmmo = 0;
+    [SerializeField] int maxAmmo = 0;
     public int _currentAmmo;
-    private int _numCollisions;
 
     [Header("Cool down Time in seconds:")]
     [SerializeField] private float coolDown;
@@ -23,22 +18,11 @@ public class ShotgunWeapon : MonoBehaviour
 
     [Header("Dev Testing")]
     [SerializeField] private bool rToReload;
-
-    public bool IsOut { get { return _isOut; } set { _isOut = value; } }
-
     private void OnEnable()
     {
         _shotgun = GetComponent<ParticleSystem>();
         _shotgun.Stop();
-    }
-
-    private void Start()
-    {
-        _parent = GameObject.Find("ShotgunPrefab");
-        _animator = _parent.GetComponentInChildren<Animator>();
-        _textureCheck = GetComponentInParent<BossAcidCheck>();
         _currentAmmo = maxAmmo;
-        _parent.SetActive(false);
     }
 
     // Update is called once per frame
@@ -51,7 +35,6 @@ public class ShotgunWeapon : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 _shotgun.Play();
-                _animator.Play("ShotgunRecoil");
                 _currentAmmo--;
                 StartCoroutine(CoolDown());
             }
@@ -65,16 +48,6 @@ public class ShotgunWeapon : MonoBehaviour
                 _currentAmmo = maxAmmo;
             }
         }
-
-        if (_numCollisions > 0)
-        {
-            _textureCheck.GetTexture();
-        }
-    }
-
-    private void LateUpdate()
-    {
-        _numCollisions = 0;
     }
 
     // When hit decrease "Health" aka paintAmount while increasing the albedo color
@@ -82,17 +55,13 @@ public class ShotgunWeapon : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
-            var enemy = other.GetComponentInParent<EnemyStats>();
+            var enemy = other.GetComponent<EnemyStats>();
 
             enemy.enemyHealth--;
             _initColor = enemy._shader.GetColor("_Albedo");
             var newColor = Color.Lerp(_initColor, Color.magenta, 0.05f);
             enemy._shader.SetVector("_Albedo", newColor);
-        }
-
-        if (other.GetComponent<Collider>() != null)
-        {
-            _numCollisions++;
+            
         }
     }
 
@@ -101,13 +70,11 @@ public class ShotgunWeapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             _isOut = false;
-            shotgunGameObject.SetActive(false);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             _isOut = true;
-            shotgunGameObject.SetActive(true);
         }
     }
 

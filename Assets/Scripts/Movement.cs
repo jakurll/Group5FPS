@@ -8,8 +8,9 @@ public class Movement : MonoBehaviour
     public float gravity = -9.81f;
 
     private CharacterController _controller;
-    private float _velocity;
-    [SerializeField] float jumpHeight = 5f;
+    private Vector3 _velocity;
+    private bool _groundedPlayer;
+    private float _jumpHeight = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,32 +21,30 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ApplyGravity();
-        ApplyMovement();
-    }
-
-    private void ApplyMovement()
-    {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-        move = move.z * transform.forward.normalized + move.x * transform.right.normalized;
-        move.y = _velocity;
-
-        _controller.Move(move * Time.deltaTime * speed);
-    }
-
-    private void ApplyGravity()
-    {
-        if (_controller.isGrounded)
+        _groundedPlayer = _controller.isGrounded;
+        if (_groundedPlayer && _velocity.y < 0)
         {
-            _velocity = -1f;
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _velocity = jumpHeight;
-            }
+          _velocity.y = 0f;
         }
 
-        _velocity -= gravity * Time.deltaTime;
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        move = transform.TransformDirection(move);
+        _controller.Move(move * Time.deltaTime * speed);
+
+        _velocity.y += gravity * Time.deltaTime;
+        _controller.Move(_velocity * Time.deltaTime);
+
+        if (move != Vector3.zero)
+        {
+          transform.forward = move;
+        }
+
+        if (Input.GetButtonDown("Jump") && _groundedPlayer)
+        {
+          _velocity.y += Mathf.Sqrt(_jumpHeight * (float)-3.0 * gravity);
+        }
+        _velocity.y += gravity * Time.deltaTime;
+        _controller.Move(_velocity * Time.deltaTime);
     }
 }
 
