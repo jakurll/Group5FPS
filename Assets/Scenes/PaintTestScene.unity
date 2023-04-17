@@ -10960,7 +10960,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: colorRange
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: targetColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: targetColor.b
+      value: 0.5613208
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: targetColor.g
+      value: 0.5876415
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: targetColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
