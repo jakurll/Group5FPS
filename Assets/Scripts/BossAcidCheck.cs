@@ -6,17 +6,21 @@ using UnityEngine;
 public class BossAcidCheck : MonoBehaviour
 {
     private CharacterController _controller;
+    private Renderer _renderer;
     private GameObject _curGround;
     private Texture2D _texture2D;
     private Material _material;
     private float _distance;
+    private bool _isrunning = true;
 
     [SerializeField] Color targetColor;
     [SerializeField] float colorRange;
+    [SerializeField] float paintGone;
     // Start is called before the first frame update
     void Start()
     {
         _controller = GetComponent<CharacterController>();
+        _renderer = GetComponent<Renderer>();
         UpdateCurrentGround();
     }
 
@@ -64,6 +68,12 @@ public class BossAcidCheck : MonoBehaviour
         _texture2D.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
         _texture2D.Apply();
         RenderTexture.ReleaseTemporary(rt);
+
+        if (_isrunning)
+        {
+            _isrunning = false;
+            StartCoroutine(RemovePaint());
+        }
     }
 
     /// <summary>
@@ -77,7 +87,6 @@ public class BossAcidCheck : MonoBehaviour
         Color floorColor = _texture2D.GetPixel((int)(_textureCoords.x * _texture2D.width), (int)(_textureCoords.y * _texture2D.height));
 
         _distance = Vector4.Distance(targetColor, floorColor);
-        Debug.Log(_distance);
     }
 
     public void HurtPlayer()
@@ -90,5 +99,16 @@ public class BossAcidCheck : MonoBehaviour
         {
             return;
         }
+    }
+
+    IEnumerator RemovePaint()
+    {
+        Debug.Log("start");
+        _isrunning = false;
+        yield return new WaitForSeconds(paintGone);
+        var _maskRenderTexture = new RenderTexture(_texture2D.width, _texture2D.height, 0);
+        _maskRenderTexture.filterMode = FilterMode.Bilinear;
+        _renderer.material.SetTexture("_Mask", _maskRenderTexture);
+        _isrunning = true;
     }
 }

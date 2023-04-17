@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     public float speed = 5f;
     public float gravity = -9.81f;
+    public uint health = 5;
 
     private CharacterController _controller;
     private float _velocity;
@@ -22,6 +23,11 @@ public class Movement : MonoBehaviour
     {
         ApplyGravity();
         ApplyMovement();
+
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void ApplyMovement()
