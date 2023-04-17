@@ -7,6 +7,10 @@ public class RifleWeapon : MonoBehaviour
 {
     private ParticleSystem _rifle;
     public GameObject rifleGameObject;
+    private Animator _animator;
+    private GameObject _parent;
+    private BossAcidCheck _textureCheck;
+    private int _numCollisions;
 
     public int maxAmmo = 0;
     [SerializeField] private float firingSpeed;
@@ -24,7 +28,12 @@ public class RifleWeapon : MonoBehaviour
     {
         _rifle = GetComponent<ParticleSystem>();
         _rifle.Stop();
-
+    }
+    private void Start()
+    {
+        _parent = GameObject.Find("MachineGunPrefab");
+        _animator = _parent.GetComponentInChildren<Animator>();
+        _textureCheck = GetComponentInParent<BossAcidCheck>();
         _currentAmmo = maxAmmo;
     }
 
@@ -43,6 +52,7 @@ public class RifleWeapon : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 _currentAmmo -= 1 * firingSpeed * Time.deltaTime;
+                _animator.Play("MachineGun");
             }
 
             if (Input.GetMouseButtonUp(0))
@@ -60,6 +70,11 @@ public class RifleWeapon : MonoBehaviour
             }
         }
 
+        if (_numCollisions > 0)
+        {
+            _textureCheck.GetTexture();
+        }
+
         // THIS IS FOR DEV TESTING
         if (rToReload && _isOut)
         {
@@ -68,6 +83,11 @@ public class RifleWeapon : MonoBehaviour
                 _currentAmmo = maxAmmo;
             }
         }
+    }
+
+    private void LateUpdate()
+    {
+        _numCollisions = 0;
     }
 
     // When hit decrease "Health" aka paintAmount while increasing the albedo color
@@ -81,6 +101,11 @@ public class RifleWeapon : MonoBehaviour
             _initColor = enemy._shader.GetColor("_Albedo");
             var newColor = Color.Lerp(_initColor, Color.yellow, 0.05f);
             enemy._shader.SetVector("_Albedo", newColor);
+        }
+
+        if (other.GetComponent<Collider>() != null)
+        {
+            _numCollisions++;
         }
     }
 

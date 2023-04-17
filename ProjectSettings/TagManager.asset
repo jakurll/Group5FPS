@@ -7,6 +7,7 @@ TagManager:
   - Shotgun
   - Rifle
   - Platform
+  - Patrol
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Enemy-Angry
   - Player
   - Gun
-  - 
+  - Floor
   - 
   - 
   - 
