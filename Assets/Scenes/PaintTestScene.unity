@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 808732209}
   - component: {fileID: 808732208}
   - component: {fileID: 808732207}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1486
+  m_Name: pb_Mesh-1370
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10957,6 +10957,30 @@ PrefabInstance:
     - target: {fileID: 540073599404584424, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
       propertyPath: m_Name
       value: PlayerWithGuns
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: colorRange
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: targetColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: targetColor.b
+      value: 0.5613208
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: targetColor.g
+      value: 0.5876415
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552173552443274915, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: targetColor.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
