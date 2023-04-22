@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     public float speed = 5f;
     public float gravity = -9.81f;
+    public uint maxHealth = 100;
     public uint health = 100;
 
     private CharacterController _controller;
@@ -27,6 +28,11 @@ public class Movement : MonoBehaviour
         if (health <= 0)
         {
             gameObject.SetActive(false);
+        }
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
         }
     }
 
