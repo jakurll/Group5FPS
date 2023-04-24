@@ -6,7 +6,8 @@ public class Movement : MonoBehaviour
 {
     public float speed = 5f;
     public float gravity = -9.81f;
-    public uint health = 5;
+    public uint maxHealth = 100;
+    public uint health = 100;
 
     private CharacterController _controller;
     private float _velocity;
@@ -27,6 +28,11 @@ public class Movement : MonoBehaviour
         if (health <= 0)
         {
             gameObject.SetActive(false);
+        }
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
         }
     }
 
@@ -52,6 +58,14 @@ public class Movement : MonoBehaviour
         }
 
         _velocity -= gravity * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+      if (other.CompareTag("Enemy"))
+      {
+        health--;
+      }
     }
 }
 

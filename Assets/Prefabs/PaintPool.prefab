@@ -3798,9 +3798,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8447a54ed6f4dd145a8fd8d662965b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   time: 0.75
   rifleAmmo: 1
   shotgunAmmo: 1
+  healthAmount: 0
 --- !u!1 &7346726043153452020
 GameObject:
   m_ObjectHideFlags: 0

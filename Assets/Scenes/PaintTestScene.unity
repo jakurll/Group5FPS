@@ -595,7 +595,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1370
+  m_Name: pb_Mesh-1454
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10884,6 +10884,17 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!114 &1930806589 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 540073599404584425, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+  m_PrefabInstance: {fileID: 540073598767842996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f8f6a4d24ab754ea152a6fdd992cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2100687784 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5038709415018165485, guid: c3ae237b00ba7e6479773a7be1f0d798, type: 3}
@@ -25682,7 +25693,7 @@ PrefabInstance:
       objectReference: {fileID: 959777040}
     - target: {fileID: 7346726041774941580, guid: 9c51c17b6bd13d047ba642f21762a83c, type: 3}
       propertyPath: m_VersionIndex
-      value: 4351
+      value: 4363
       objectReference: {fileID: 0}
     - target: {fileID: 7346726041774941581, guid: 9c51c17b6bd13d047ba642f21762a83c, type: 3}
       propertyPath: m_RootOrder
@@ -25727,6 +25738,14 @@ PrefabInstance:
     - target: {fileID: 7346726041774941581, guid: 9c51c17b6bd13d047ba642f21762a83c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346726042095814008, guid: 9c51c17b6bd13d047ba642f21762a83c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1930806589}
+    - target: {fileID: 7346726042095814008, guid: 9c51c17b6bd13d047ba642f21762a83c, type: 3}
+      propertyPath: healthAmount
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c51c17b6bd13d047ba642f21762a83c, type: 3}
