@@ -4,69 +4,72 @@ using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
-  public GameObject player; //Player Target
-  public GameObject patrol; //Patrol Position
-  public float speed = 0.02f;
-  public bool run = false; //Chase the player
-  public bool seekPatrol = false;
+    public GameObject player; //Player Target
+    public GameObject patrol; //Patrol Position
+    public float speed = 0.02f;
+    public bool run = false; //Chase the player
+    public bool seekPatrol = false;
+    private Animator _animator;
 
-  // Start is called before the first frame update
-  void Start()
-  {
-
-  }
-
-  // Update is called once per frame
-  void Update()
-  {
-    if (player != null && run)
+    // Start is called before the first frame update
+    void Start()
     {
-      Run();
+        _animator = GetComponent<Animator>();
     }
 
-    if (player == null && seekPatrol)
+    // Update is called once per frame
+    void Update()
     {
-      SeekPatrol();
-    }
-  }
+        if (player != null && run)
+        {
+            Run();
+        }
 
-  //Check if player is in box collider
-  private void OnTriggerEnter(Collider other)
-  {
-    if (other.CompareTag("Player"))
+        if (player == null && seekPatrol)
+        {
+            SeekPatrol();
+        }
+    }
+
+    //Check if player is in box collider
+    private void OnTriggerEnter(Collider other)
     {
-      player = other.gameObject;
-      run = true;
-      seekPatrol = false;
+        if (other.CompareTag("Player"))
+        {
+            player = other.gameObject;
+            run = true;
+            seekPatrol = false;
+            _animator.SetBool("isRunning", true);
+        }
     }
-  }
 
-  //Check if player left box collider
-  private void OnTriggerExit(Collider other)
-  {
-    if (other.CompareTag("Player"))
+    //Check if player left box collider
+    private void OnTriggerExit(Collider other)
     {
-      player = null;
-      run = false;
+        if (other.CompareTag("Player"))
+        {
+            player = null;
+            run = false;
+            _animator.SetBool("isRunning", false);
+        }
+        else
+        {
+            seekPatrol = true;
+        }
     }
-    else
+
+    //Look and run towards player
+    private void Run()
     {
-      seekPatrol = true;
+        transform.LookAt(player.transform.position);
+        transform.position = (transform.forward * speed) + transform.position;
     }
-  }
 
-  //Look and run towards player
-  private void Run()
-  {
-    transform.LookAt(player.transform.position);
-    transform.position = (transform.forward * speed) + transform.position;
-  }
-
-  //Look and run towards patrol spot
-  private void SeekPatrol()
-  {
-    transform.LookAt(patrol.transform.position);
-    transform.position = (transform.forward * speed) + transform.position;
-    transform.LookAt(patrol.transform.forward);
-  }
+    //Look and run towards patrol spot
+    private void SeekPatrol()
+    {
+        transform.LookAt(patrol.transform.position);
+        transform.position = (transform.forward * speed) + transform.position;
+        transform.LookAt(patrol.transform.forward);
+    }
 }
