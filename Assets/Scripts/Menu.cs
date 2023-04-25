@@ -15,4 +15,10 @@ public class Menu : MonoBehaviour
         Debug.Log("Quit Game");
         Application.Quit();
     }
+
+    public void ClickToHome()
+    {
+        Debug.Log("Goes to Menu");
+        SceneManager.LoadScene(0);
+    }
 }

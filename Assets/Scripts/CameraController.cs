@@ -30,6 +30,6 @@ public class CameraController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(camXRotation, 0f, 0f);
         _parent.Rotate(Vector3.up * camX);
 
-        _mouseMovement = slider.value;
+        //_mouseMovement = slider.value;
     }
 }
