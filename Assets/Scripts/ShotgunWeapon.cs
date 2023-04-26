@@ -68,7 +68,7 @@ public class ShotgunWeapon : MonoBehaviour
 
         if (_numCollisions > 0)
         {
-            _textureCheck.GetTexture();
+           // _textureCheck.GetTexture();
         }
     }
 
