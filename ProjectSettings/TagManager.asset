@@ -8,6 +8,7 @@ TagManager:
   - Rifle
   - Platform
   - Patrol
+  - Enemy
   layers:
   - Default
   - TransparentFX

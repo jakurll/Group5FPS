@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PaintPool : MonoBehaviour
 {
+    [SerializeField] Movement player;
     private bool _isIn = false;
     private float _numColor = -.05f;
     private Material _shader;
@@ -15,6 +16,7 @@ public class PaintPool : MonoBehaviour
     [Header("Amount added to ammo")]
     [SerializeField] float rifleAmmo;
     [SerializeField] int shotgunAmmo;
+    [SerializeField] uint healthAmount;
 
     private void Start()
     {
@@ -82,6 +84,7 @@ public class PaintPool : MonoBehaviour
                 shotgun._currentAmmo += shotgunAmmo;
             }
 
+            player.health += healthAmount;
             CheckAmmo(rifle, shotgun);
         }
     }
