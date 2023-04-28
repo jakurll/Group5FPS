@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - Patrol
   - Enemy
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - FixedUp
   - 
   - 
   - 

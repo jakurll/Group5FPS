@@ -24,6 +24,7 @@ public class SpeedPickup : MonoBehaviour
         {
           movement.speed += speedBoost;
           StartCoroutine("SpeedDuration");
+          Destroy(this.gameObject);
         }
     }
 
@@ -31,6 +32,6 @@ public class SpeedPickup : MonoBehaviour
     {
         yield return new WaitForSeconds(speedLimit);
         movement.speed -= speedBoost;
-        Destroy(gameObject);
+        //Destroy(this.gameObject);
     }
 }

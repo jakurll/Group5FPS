@@ -72,7 +72,7 @@ public class RifleWeapon : MonoBehaviour
 
         if (_numCollisions > 0)
         {
-            _textureCheck.GetTexture();
+           // _textureCheck.GetTexture();
         }
 
         // THIS IS FOR DEV TESTING

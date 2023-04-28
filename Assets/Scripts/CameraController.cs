@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class CameraController : MonoBehaviour
 
     private Transform _parent;
     private float camXRotation;
+    Slider slider;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +29,7 @@ public class CameraController : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(camXRotation, 0f, 0f);
         _parent.Rotate(Vector3.up * camX);
+
+        //_mouseMovement = slider.value;
     }
 }
