@@ -4,17 +4,36 @@ using UnityEngine;
 
 public class KeyPickup : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        PlayerInventory inventory = other.GetComponent<PlayerInventory>();
-        if(inventory != null )
-        {
-            if(inventory.hasKey == true)
-            {
+  void FindObjects()
+  {
+    GameObject[] objects;
+    objects = GameObject.FindGameObjectsWithTag("Enemy");
 
-            }
-            inventory.hasKey = true;
-            Destroy(this.gameObject);
+    //If there are no more enemies, spawn key pickup
+    if (objects.Length == 0)
+    {
+      void OnTriggerEnter(Collider other)
+      {
+        //Check if player has the key
+        PlayerInventory inventory = other.GetComponent<PlayerInventory>();
+        if (inventory != null)
+        {
+          if (inventory.hasKey == true)
+          {
+
+          }
+          inventory.hasKey = true;
+          Destroy(this.gameObject);
         }
+      }
     }
+    else
+    {
+      for (int i = 0; i < objects.Length; i++)
+      {
+        objects[i].SetActive(true);
+      }
+    }
+  }
+
 }
