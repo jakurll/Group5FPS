@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000054897602, g: 0.00006609926, b: 0.14454328, a: 1}
+  m_IndirectSpecularColor: {r: 0.0000508379, g: 0.00006613617, b: 0.14466785, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -172,6 +172,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9111846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9111820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02889ead383d1b3469aaca1825b03151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: {fileID: 507068364}
+  pickedUpKey: 0
 --- !u!1 &13889657
 GameObject:
   m_ObjectHideFlags: 0
@@ -5691,7 +5705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 540073599404584405, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 540073599404584424, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
       propertyPath: m_IsActive
@@ -7729,18 +7743,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7783132510863308817, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
   m_PrefabInstance: {fileID: 1026184653}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &507068371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507068364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02889ead383d1b3469aaca1825b03151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &510658623
 GameObject:
   m_ObjectHideFlags: 0
@@ -15962,6 +15964,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7817558617665525310, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
+      propertyPath: key
+      value: 
+      objectReference: {fileID: 507068364}
     m_RemovedComponents:
     - {fileID: 7817558617665525310, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
