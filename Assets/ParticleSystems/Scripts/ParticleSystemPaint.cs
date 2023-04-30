@@ -27,6 +27,7 @@ public class ParticleSystemPaint : MonoBehaviour
         collisionEvents = new List<ParticleCollisionEvent>();
     }
 
+    // On each collision tell paintmanager to paint at that position
     private void OnParticleCollision(GameObject other)
     {
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
