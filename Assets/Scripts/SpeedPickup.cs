@@ -15,6 +15,7 @@ public class SpeedPickup : MonoBehaviour
     {
         movement = FindObjectOfType<Movement>();
     }
+
     // Destroy the pickup game object and add
     // speed boost to movement speed of character
     void OnTriggerEnter(Collider col)
@@ -28,10 +29,10 @@ public class SpeedPickup : MonoBehaviour
         }
     }
 
+  // Add a time limit to the speed boost
     IEnumerator SpeedDuration()
     {
         yield return new WaitForSeconds(speedLimit);
         movement.speed -= speedBoost;
-        //Destroy(this.gameObject);
     }
 }
