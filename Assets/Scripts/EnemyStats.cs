@@ -7,13 +7,13 @@ public class EnemyStats : MonoBehaviour
     public float enemyHealth = 100f;
     public Material _shader { get; set; }
 
-    // Start is called before the first frame update
+    // Get material
     void Start()
     {
         _shader = GetComponentInChildren<Renderer>().material;
     }
 
-    // Update is called once per frame
+    // If health is less than zero then set then non-active
     void Update()
     {
         if (enemyHealth <= 0)

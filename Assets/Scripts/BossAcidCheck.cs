@@ -16,7 +16,8 @@ public class BossAcidCheck : MonoBehaviour
     [SerializeField] Color targetColor;
     [SerializeField] float colorRange;
     [SerializeField] float paintGone;
-    // Start is called before the first frame update
+
+    // get controller and renderer while also running an intial update on the ground texture
     void Start()
     {
         _controller = GetComponent<CharacterController>();
@@ -24,11 +25,14 @@ public class BossAcidCheck : MonoBehaviour
         UpdateCurrentGround();
     }
 
+    // Run the update ground method on a fixed rate
     private void FixedUpdate()
     {
         UpdateCurrentGround();
     }
 
+    // if the ground the player is standing on is new then get the ground object and its material then while the player is on that ground
+    // get the floors color and check to see if they are standing on boss paint
     public void UpdateCurrentGround()
     {
         if (_controller.isGrounded)
@@ -89,6 +93,7 @@ public class BossAcidCheck : MonoBehaviour
         _distance = Vector4.Distance(targetColor, floorColor);
     }
 
+    // If the player is standing on the bosspaint color then hurt them
     public void HurtPlayer()
     {
         if (_distance <= colorRange)
@@ -101,6 +106,7 @@ public class BossAcidCheck : MonoBehaviour
         }
     }
 
+    // After a certain amount of time create an empty rendertexture for the material with paint on it
     IEnumerator RemovePaint()
     {
         Debug.Log("start");

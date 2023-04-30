@@ -26,12 +26,17 @@ public class ShotgunWeapon : MonoBehaviour
 
     public bool IsOut { get { return _isOut; } set { _isOut = value; } }
 
+    // Get particle system and stop ti from playing when enabled
     private void OnEnable()
     {
         _shotgun = GetComponent<ParticleSystem>();
         _shotgun.Stop();
     }
 
+    //Get parent that holds the model
+    // Get animator, bossAcidCheck script
+    // Set the ammo to max ammo
+    // Then set it false since you start with the rifle out
     private void Start()
     {
         _parent = GameObject.Find("ShotgunPrefab");
@@ -41,7 +46,9 @@ public class ShotgunWeapon : MonoBehaviour
         _parent.SetActive(false);
     }
 
-    // Update is called once per frame
+    // Check to see if player has switched weapon
+    // If the weapon has ammo and is out, then the player can shoot it
+    // Play animations subtract from ammo and start cooldown
     void Update()
     {
         WeaponSwitching();
@@ -66,12 +73,15 @@ public class ShotgunWeapon : MonoBehaviour
             }
         }
 
+        // This would update the textures for the BossAcidCheck script
         if (_numCollisions > 0)
         {
            // _textureCheck.GetTexture();
         }
     }
 
+    // This would set a counter to zero after firing and particle collisions have stopped
+    // So the BossAcid texture would only update for the collisions that happened.
     private void LateUpdate()
     {
         _numCollisions = 0;
@@ -96,6 +106,8 @@ public class ShotgunWeapon : MonoBehaviour
         }
     }
 
+
+    // Switch weapons logic
     public void WeaponSwitching()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -111,6 +123,7 @@ public class ShotgunWeapon : MonoBehaviour
         }
     }
 
+    // Cooldown between shotgun shots
     IEnumerator CoolDown()
     {
         _isOut = false;
