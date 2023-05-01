@@ -6,12 +6,12 @@ public class Agent : MonoBehaviour
 {
   public GameObject player; //Player Target
   public GameObject patrol; //Patrol Position
-  public float speed = 0.15f;
+  public float speed = 0.15f; //Enemy speed
   public bool run = false; //Chase the player
-  public bool seekPatrol = false;
-  private Animator _animator;
+  public bool seekPatrol = false; //Go to Patrol spot?
+  private Animator _animator; //Animation
 
-  public Rigidbody EnemyRigidbody;
+  public Rigidbody EnemyRigidbody; //Enemy rigidbody
 
   // Start is called before the first frame update
   void Start()
@@ -24,19 +24,21 @@ public class Agent : MonoBehaviour
     //This locks the RigidBody so that it does not move or rotate in the Y axis.
     EnemyRigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationY;
 
-    //Enemy stand up straight
+    //Enemy will stand up straight when the game starts
     transform.Rotate(-90, 0, 0);
   }
 
   // Update is called once per frame
   void Update()
   {
+    //Run towards the player
     if (player != null && run)
     {
       Run();
       transform.Rotate(-90, 0, 0);
     }
 
+    //Run towards the patrol spot assigned to the enemy
     if (player == null && seekPatrol)
     {
       SeekPatrol();

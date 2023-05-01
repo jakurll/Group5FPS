@@ -5,6 +5,11 @@ using UnityEngine.AI;
 
 public class Pursue : MonoBehaviour
 {
+  //Script is not to be used, use Agent script instead
+  //
+  //
+  //
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   public Transform targetObj;
 
   void Start()
