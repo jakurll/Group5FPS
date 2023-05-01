@@ -23,6 +23,7 @@ public class PaintPool : MonoBehaviour
         _shader = GetComponentInParent<Renderer>().material;
     }
 
+    // If palyer enters paint pool get the rifle and shotgun components and start filling them
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 8)
@@ -38,6 +39,8 @@ public class PaintPool : MonoBehaviour
         }
     }
 
+    // While staying in check which gun is out and continue filling
+    // And make sure ammo does not exceed max
     private void OnTriggerStay(Collider other)
     {
         var rifle = other.gameObject.GetComponentInChildren<RifleWeapon>();
@@ -57,6 +60,7 @@ public class PaintPool : MonoBehaviour
         }
     }
 
+    // If player leaves stop filling and check to make sure ammo does not exceed the maximum amount
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.layer == 8)
@@ -70,6 +74,7 @@ public class PaintPool : MonoBehaviour
         }
     }
 
+    //FIll paint based onwhich weapon is out
     IEnumerator FillPaint(RifleWeapon rifle, ShotgunWeapon shotgun)
     {
         while (_isIn)
@@ -89,6 +94,7 @@ public class PaintPool : MonoBehaviour
         }
     }
 
+    //check both weapons to make sure ammo does nto exceed max
     private void CheckAmmo(RifleWeapon rifle, ShotgunWeapon shotgun)
     {
         if (rifle._currentAmmo > rifle.maxAmmo)
@@ -102,6 +108,7 @@ public class PaintPool : MonoBehaviour
         }
     }
 
+    // Depending on which weapon is out change color of pool
     public void CheckWeapon(RifleWeapon rifle)
     {
         if (rifle.IsOut && _shader.GetFloat("_TurnGun") > 0f)
@@ -116,6 +123,7 @@ public class PaintPool : MonoBehaviour
         }
     }
 
+    //Change color of pool until reaches desired color
     IEnumerator ChangeColor(bool rifle)
     {
         if (rifle)

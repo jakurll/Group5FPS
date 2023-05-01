@@ -11,14 +11,14 @@ public class CameraController : MonoBehaviour
     private float camXRotation;
     Slider slider;
 
-    // Start is called before the first frame update
+    // Get parent and lock cursor
     void Start()
     {
         _parent = transform.parent;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
+    // Get mouse coords then convert that into a clamp radius that the player can move the camera around
     void Update()
     {
         float camX = Input.GetAxis("Mouse X") * _mouseMovement * Time.deltaTime;

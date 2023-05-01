@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
         _controller = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
+    // Apply everything and check if player is dead and cap health
     void Update()
     {
         ApplyGravity();
@@ -36,6 +36,7 @@ public class Movement : MonoBehaviour
         }
     }
 
+    // Convert players input into character controller movement
     private void ApplyMovement()
     {
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
@@ -45,6 +46,7 @@ public class Movement : MonoBehaviour
         _controller.Move(move * Time.deltaTime * speed);
     }
 
+    // Keep player on ground, if on ground allow jumping, calculate gravity
     private void ApplyGravity()
     {
         if (_controller.isGrounded)
