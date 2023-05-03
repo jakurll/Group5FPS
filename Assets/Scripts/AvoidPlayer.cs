@@ -7,10 +7,14 @@ public class AvoidPlayer : MonoBehaviour
   private UnityEngine.AI.NavMeshAgent Agent; //Enemy NavMeshAgent
   public GameObject Player; //Player object
   public float EnemyDistance = 4.0f; //Distance that the enemy will run away from the player
+  private Animator animator; //Animation
 
   // Start is called before the first frame update
   void Start()
   {
+    //Grab animator for animations
+    animator = GetComponent<Animator>();
+
     //Get Enemy NavMeshAgent
     Agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
   }
@@ -27,6 +31,12 @@ public class AvoidPlayer : MonoBehaviour
       Vector3 dirToPlayer = transform.position - Player.transform.position;
       Vector3 newPos = transform.position + dirToPlayer;
       Agent.SetDestination(newPos);
+      animator.SetBool("isRunning", true);
+    }
+    //Otherwise go idle
+    else
+    {
+      animator.SetBool("isRunning", false);
     }
   }
 }

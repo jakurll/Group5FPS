@@ -11,7 +11,7 @@ public class Agent : MonoBehaviour
   public bool seekPatrol = false; //Go to Patrol spot?
   private Animator _animator; //Animation
 
-  public Rigidbody EnemyRigidbody; //Enemy rigidbody
+  private Rigidbody EnemyRigidbody; //Enemy rigid body
 
   // Start is called before the first frame update
   void Start()
