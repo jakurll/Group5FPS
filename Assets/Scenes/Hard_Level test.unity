@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0000508379, g: 0.00006613617, b: 0.14466785, a: 1}
+  m_IndirectSpecularColor: {r: 0.000055406912, g: 0.00006569901, b: 0.14456892, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8241,7 +8241,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27952
+  m_Name: pb_Mesh27604
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10639,6 +10639,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 9111820}
+    - target: {fileID: 1415720253, guid: ebc02905f7b4c5b498c58f0290f9204d, type: 3}
+      propertyPath: EnemyRigidbody
+      value: 
+      objectReference: {fileID: 2051266719}
     - target: {fileID: 3688551343686023717, guid: ebc02905f7b4c5b498c58f0290f9204d, type: 3}
       propertyPath: m_Name
       value: FixedMadEnemy (1)
@@ -12344,7 +12348,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28012
+  m_Name: pb_Mesh27664
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12830,6 +12834,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!54 &726999355 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1415720252, guid: ebc02905f7b4c5b498c58f0290f9204d, type: 3}
+  m_PrefabInstance: {fileID: 1265792177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &727593857
 Mesh:
   m_ObjectHideFlags: 0
@@ -15139,7 +15148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867713641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.10121, y: 1.5, z: 7.40074}
+  m_LocalPosition: {x: -12.504999, y: 1.5, z: 7.40074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16870,7 +16879,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28160
+  m_Name: pb_Mesh27812
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21480,6 +21489,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 9111820}
+    - target: {fileID: 1415720253, guid: ebc02905f7b4c5b498c58f0290f9204d, type: 3}
+      propertyPath: EnemyRigidbody
+      value: 
+      objectReference: {fileID: 726999355}
+    - target: {fileID: 1415720255, guid: ebc02905f7b4c5b498c58f0290f9204d, type: 3}
+      propertyPath: m_Size.y
+      value: 14.317253
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415720255, guid: ebc02905f7b4c5b498c58f0290f9204d, type: 3}
+      propertyPath: m_Center.y
+      value: -1.6527992
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415720255, guid: ebc02905f7b4c5b498c58f0290f9204d, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3688551343686023717, guid: ebc02905f7b4c5b498c58f0290f9204d, type: 3}
       propertyPath: m_Name
       value: FixedMadEnemy (2)
@@ -33274,7 +33299,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29150
+  m_Name: pb_Mesh28814
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33890,6 +33915,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044884986}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2051266719 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1415720252, guid: ebc02905f7b4c5b498c58f0290f9204d, type: 3}
+  m_PrefabInstance: {fileID: 608970645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2088737022
 GameObject:
   m_ObjectHideFlags: 0
@@ -34498,7 +34528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2147468606104007265, guid: e4bee3d535c97c845be7f9cbf0b4ca60, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2147468606104007277, guid: e4bee3d535c97c845be7f9cbf0b4ca60, type: 3}
       propertyPath: m_Pivot.x
