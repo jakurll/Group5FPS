@@ -31,12 +31,12 @@ public class AvoidPlayer : MonoBehaviour
       Vector3 dirToPlayer = transform.position - Player.transform.position;
       Vector3 newPos = transform.position + dirToPlayer;
       Agent.SetDestination(newPos);
-      animator.SetBool("isRunning", true);
+      animator.SetBool("sadRunning", true);
     }
     //Otherwise go idle
     else
     {
-      animator.SetBool("isRunning", false);
+      animator.SetBool("sadRunning", false);
     }
   }
 }

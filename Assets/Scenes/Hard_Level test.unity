@@ -11158,6 +11158,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 802599977}
     m_Modifications:
+    - target: {fileID: 3883266408327590174, guid: 9cd7f26397c998940915c7a6903f4808, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8b0e01a919681c849af84c86930c66a9, type: 2}
     - target: {fileID: 4295107317065233969, guid: 9cd7f26397c998940915c7a6903f4808, type: 3}
       propertyPath: _paintManager
       value: 
