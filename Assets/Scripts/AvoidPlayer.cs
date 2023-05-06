@@ -7,26 +7,36 @@ public class AvoidPlayer : MonoBehaviour
   private UnityEngine.AI.NavMeshAgent Agent; //Enemy NavMeshAgent
   public GameObject Player; //Player object
   public float EnemyDistance = 4.0f; //Distance that the enemy will run away from the player
+  private Animator animator; //Animation
 
-    // Start is called before the first frame update
-    void Start()
+  // Start is called before the first frame update
+  void Start()
   {
-        //Get Enemy NavMeshAgent
-        Agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+    //Grab animator for animations
+    animator = GetComponent<Animator>();
+
+    //Get Enemy NavMeshAgent
+    Agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
   }
 
   // Update is called once per frame
   void Update()
   {
-        //Set distance between the player and enemy
-        float distance = Vector3.Distance(transform.position, Player.transform.position);
+    //Set distance between the player and enemy
+    float distance = Vector3.Distance(transform.position, Player.transform.position);
 
-        //Run away from player if they are within distance
-     if (distance < EnemyDistance)
+    //Run away from player if they are within distance
+    if (distance < EnemyDistance)
     {
       Vector3 dirToPlayer = transform.position - Player.transform.position;
       Vector3 newPos = transform.position + dirToPlayer;
       Agent.SetDestination(newPos);
+      animator.SetBool("isRunning", true);
+    }
+    //Otherwise go idle
+    else
+    {
+      animator.SetBool("isRunning", false);
     }
   }
 }
