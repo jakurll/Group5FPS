@@ -20,10 +20,8 @@ public class AvoidPlayer : MonoBehaviour
     //Get Enemy NavMeshAgent
     Agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 
-        //Freeze Y coordinate so enemy does not float
-        EnemyRigidbody = GetComponent<Rigidbody>();
-        //This locks the RigidBody so that it does not move or rotate in the Y axis.
-        EnemyRigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationY;
+    //Enemy will stand up straight when the game starts
+    transform.Rotate(-90, 0, 0);
     }
 
   // Update is called once per frame
@@ -35,6 +33,7 @@ public class AvoidPlayer : MonoBehaviour
     //Run away from player if they are within distance
     if (distance < EnemyDistance)
     {
+      transform.Rotate(-90, 0, 0);
       Vector3 dirToPlayer = transform.position - Player.transform.position;
       Vector3 newPos = transform.position + dirToPlayer;
       Agent.SetDestination(newPos);
@@ -43,6 +42,7 @@ public class AvoidPlayer : MonoBehaviour
     //Otherwise go idle
     else
     {
+      transform.Rotate(-90, 0, 0);
       animator.SetBool("sadRunning", false);
     }
   }
