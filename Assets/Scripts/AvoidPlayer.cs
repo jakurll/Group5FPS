@@ -9,8 +9,6 @@ public class AvoidPlayer : MonoBehaviour
   public float EnemyDistance = 4.0f; //Distance that the enemy will run away from the player
   private Animator animator; //Animation
 
-    private Rigidbody EnemyRigidbody; //Enemy rigid body
-
     // Start is called before the first frame update
     void Start()
   {
