@@ -465,7 +465,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11910
+  m_Name: pb_Mesh-231412
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -859,6 +859,10 @@ PrefabInstance:
       value: Simple Player
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: m_Speed
+      value: 20.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
       value: 1
       objectReference: {fileID: 0}
@@ -1136,6 +1140,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358753, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_Name
       value: Simple Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: m_Speed
+      value: 20.4
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
@@ -1525,7 +1533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2147468606104007265, guid: e4bee3d535c97c845be7f9cbf0b4ca60, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2147468606104007277, guid: e4bee3d535c97c845be7f9cbf0b4ca60, type: 3}
       propertyPath: m_Pivot.x
@@ -1624,6 +1632,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358753, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_Name
       value: Simple Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: m_Speed
+      value: 20.4
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
@@ -2640,7 +2652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7095544276723262732, guid: ee5e8118593b696458b41151f31cfa97, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7095544276723262732, guid: ee5e8118593b696458b41151f31cfa97, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3033,10 +3045,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1618811550}
   - {fileID: 665561006}
   - {fileID: 816607897}
   - {fileID: 1515467928}
-  - {fileID: 1618811550}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4175,6 +4187,10 @@ PrefabInstance:
       value: Simple Player
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: m_Speed
+      value: 20.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
       value: 1
       objectReference: {fileID: 0}
@@ -4575,6 +4591,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358753, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_Name
       value: Simple Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: m_Speed
+      value: 20.4
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
@@ -5094,7 +5114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7095544276723262732, guid: ee5e8118593b696458b41151f31cfa97, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7095544276723262732, guid: ee5e8118593b696458b41151f31cfa97, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6052,7 +6072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 540073599404584425, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
       propertyPath: speed
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5545344480722616264, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
       propertyPath: paintManager
@@ -7434,6 +7454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FixedMadEnemy (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315690, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315691, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: patrol
       value: 
@@ -7683,6 +7707,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358753, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_Name
       value: Simple Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: m_Speed
+      value: 20.4
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
@@ -8742,6 +8770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FixedMadEnemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315690, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315691, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: patrol
       value: 
@@ -8762,6 +8794,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358753, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_Name
       value: Simple Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: m_Speed
+      value: 20.4
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
@@ -9032,7 +9068,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11924
+  m_Name: pb_Mesh-231426
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9566,6 +9602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FixedMadEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315690, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315691, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: patrol
       value: 
@@ -9582,7 +9622,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11560
+  m_Name: pb_Mesh-231212
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10004,7 +10044,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7785456567498906577, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785456567498906577, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785456567498906577, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785456567498906577, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7785456567498906577, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10016,7 +10068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7785456567498906577, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.233864
+      value: -29.5
       objectReference: {fileID: 0}
     - target: {fileID: 7785456567498906577, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10046,8 +10098,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7817558617665525310, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3622cd491860e914fb337062e3d48b99, type: 3}
 --- !u!1 &1472849461
 GameObject:
@@ -10205,7 +10256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7095544276723262732, guid: ee5e8118593b696458b41151f31cfa97, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7095544276723262732, guid: ee5e8118593b696458b41151f31cfa97, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10798,6 +10849,10 @@ PrefabInstance:
     - target: {fileID: 6310323985821315688, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: m_Name
       value: FixedMadEnemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315690, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: m_Speed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315691, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: patrol
@@ -11652,6 +11707,10 @@ PrefabInstance:
       value: Simple Player
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: m_Speed
+      value: 20.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
       value: 1
       objectReference: {fileID: 0}
@@ -11920,7 +11979,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11892
+  m_Name: pb_Mesh-231394
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14264,6 +14323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FixedMadEnemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315690, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315691, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: patrol
       value: 
@@ -14280,7 +14343,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11938
+  m_Name: pb_Mesh-231440
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
