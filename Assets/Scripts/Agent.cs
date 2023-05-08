@@ -21,8 +21,6 @@ public class Agent : MonoBehaviour
 
     //Freeze Y coordinate so enemy does not float
     EnemyRigidbody = GetComponent<Rigidbody>();
-    //This locks the RigidBody so that it does not move or rotate in the Y axis.
-    EnemyRigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationY;
 
     //Enemy will stand up straight when the game starts
     transform.Rotate(-90, 0, 0);
