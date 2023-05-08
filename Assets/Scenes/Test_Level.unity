@@ -8030,6 +8030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Simple Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: m_BaseOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358759, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: Player
       value: 
