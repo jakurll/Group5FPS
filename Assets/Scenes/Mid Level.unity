@@ -866,6 +866,10 @@ PrefabInstance:
       propertyPath: m_BaseOffset
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358758, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: enemyHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358759, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: Player
       value: 
@@ -1148,6 +1152,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358758, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: enemyHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358759, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: Player
@@ -1640,6 +1648,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358758, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: enemyHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358759, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: Player
@@ -4194,6 +4206,10 @@ PrefabInstance:
       propertyPath: m_BaseOffset
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358758, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: enemyHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358759, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: Player
       value: 
@@ -4599,6 +4615,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358758, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: enemyHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358759, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: Player
@@ -5156,6 +5176,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7095544276723262735, guid: ee5e8118593b696458b41151f31cfa97, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1526974686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee5e8118593b696458b41151f31cfa97, type: 3}
 --- !u!1 &702134354
@@ -6081,6 +6105,10 @@ PrefabInstance:
     - target: {fileID: 540073599404584425, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
       propertyPath: jumpHeight
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 540073599404584427, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5545344480722616264, guid: c0145e2c0e49cc949a81ed7f74b21473, type: 3}
       propertyPath: paintManager
@@ -7458,6 +7486,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315687, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: enemyHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315688, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: m_Name
       value: FixedMadEnemy (5)
@@ -7723,6 +7755,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358758, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: enemyHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358759, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: Player
@@ -8774,6 +8810,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315687, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: enemyHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315688, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: m_Name
       value: FixedMadEnemy (2)
@@ -8810,6 +8850,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358758, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: enemyHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358759, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: Player
@@ -9606,6 +9650,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315687, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: enemyHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315688, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: m_Name
       value: FixedMadEnemy (1)
@@ -9630,7 +9678,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4748
+  m_Name: pb_Mesh-3104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10854,6 +10902,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315687, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: enemyHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315688, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: m_Name
       value: FixedMadEnemy (4)
@@ -11721,6 +11773,10 @@ PrefabInstance:
     - target: {fileID: 4710235937778358756, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: m_BaseOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710235937778358758, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
+      propertyPath: enemyHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4710235937778358759, guid: ef2ffdffde0fa5d479230018f336c315, type: 3}
       propertyPath: Player
@@ -13398,6 +13454,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1787783218}
+    - target: {fileID: 8871740779640223128, guid: 18dc4e6a2e3082d47b46df6b431b185e, type: 3}
+      propertyPath: m_VersionIndex
+      value: 4281
+      objectReference: {fileID: 0}
     - target: {fileID: 8871740779640223130, guid: 18dc4e6a2e3082d47b46df6b431b185e, type: 3}
       propertyPath: m_Size.x
       value: 2.46
@@ -13470,6 +13530,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2093438425}
+    - target: {fileID: 8871740780037299000, guid: 18dc4e6a2e3082d47b46df6b431b185e, type: 3}
+      propertyPath: m_VersionIndex
+      value: 2458
+      objectReference: {fileID: 0}
     - target: {fileID: 8871740780523697778, guid: 18dc4e6a2e3082d47b46df6b431b185e, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -13486,6 +13550,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1288870379}
+    - target: {fileID: 8871740780523697782, guid: 18dc4e6a2e3082d47b46df6b431b185e, type: 3}
+      propertyPath: m_VersionIndex
+      value: 2455
+      objectReference: {fileID: 0}
     - target: {fileID: 8871740781311837701, guid: 18dc4e6a2e3082d47b46df6b431b185e, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -13502,6 +13570,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 41940326}
+    - target: {fileID: 8871740781311837705, guid: 18dc4e6a2e3082d47b46df6b431b185e, type: 3}
+      propertyPath: m_VersionIndex
+      value: 3550
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18dc4e6a2e3082d47b46df6b431b185e, type: 3}
 --- !u!1 &2011636706
@@ -14334,6 +14406,10 @@ PrefabInstance:
     - target: {fileID: 6310323985821315681, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310323985821315687, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
+      propertyPath: enemyHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6310323985821315688, guid: 3305b652922ffd54894f9d6a6d3a423e, type: 3}
       propertyPath: m_Name
