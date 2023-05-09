@@ -4,35 +4,47 @@ using UnityEngine;
 
 public class SpeedPickup : MonoBehaviour
 {
-    //Get speedBoost value and get speed value from movement script
-    public float speedBoost = 1.0f;
-    public float speedLimit = 10.0f;
+  //Get speedBoost value and get speed value from movement script
+  public int speedLimit = 10;
+  public GameObject player;
 
-    private int numSpeedpickup = 0;
-    Movement movement;
+  Movement movement;
 
-    void Awake()
+  void Awake()
+  {
+
+
+  }
+
+  void Update()
+  {
+
+  }
+
+  // Destroy the pickup game object and add
+  // speed boost to movement speed of character
+  void OnTriggerEnter(Collider other)
+  {
+    if (other.CompareTag("Player"))
     {
-        movement = FindObjectOfType<Movement>();
+      player = other.gameObject;
+      movement = FindObjectOfType<Movement>();
+      StartCoroutine(SpeedDuration());
     }
-
-    // Destroy the pickup game object and add
-    // speed boost to movement speed of character
-    void OnTriggerEnter(Collider col)
+    else
     {
-        numSpeedpickup += 1;
-        if (numSpeedpickup == 1)
-        {
-          movement.speed += speedBoost;
-          StartCoroutine("SpeedDuration");
-          Destroy(this.gameObject);
-        }
+      movement.speed = 5.0f;
     }
+  }
 
   // Add a time limit to the speed boost
-    IEnumerator SpeedDuration()
-    {
-        yield return new WaitForSeconds(speedLimit);
-        movement.speed -= speedBoost;
-    }
+  IEnumerator SpeedDuration()
+  {
+    movement.speed = 10.0f;
+
+    yield return new WaitForSeconds(5);
+
+    Destroy(this.gameObject);
+    movement.speed = 5.0f;
+  }
 }

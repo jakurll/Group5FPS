@@ -42,7 +42,6 @@ public class Movement : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         move = move.z * transform.forward.normalized + move.x * transform.right.normalized;
         move.y = _velocity;
-
         _controller.Move(move * Time.deltaTime * speed);
     }
 
